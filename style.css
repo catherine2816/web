@@ -1,0 +1,175 @@
+/* CONFIGURACION GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #94f5f8; /* Celeste claro*/
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* TITULOS */
+h1 {
+    color: #010407;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+h2 {
+    color: rgb(250, 45, 189);
+    font-size: 1.8rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+h3 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+h4 {
+    color: #f75fab;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* 1. NAVBAR FLEXIBLE */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-principal ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-principal a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 2. CUADRICULA DE SERVICIOS */
+.grupo-servicios {
+    display: flex;
+    flex-wrap: wrap; /* Salto de línea para móviles */
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.tarjeta-servicio {
+    flex: 1 1 calc(33.33% - 40px); /* 3 columnas en PC */
+    min-width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 4. FORMULARIO Y MODELO DE CAJA */
+#formulario-contacto {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px 0;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo-formulario input {
+    width: 100%; /* Ocupa el 100% en móvil y PC */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* VALIDACION VISUAL */
+input:valid {
+    border-left: 5px solid rgb(192, 247, 192);
+}
+
+input:invalid {
+    border-left: 5px solid rgb(253, 138, 244);
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(250, 45, 189);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* 3. DISEÑO MOVIL (768px) */
+@media (max-width: 768px) {
+    .header-principal {
+        flex-direction: column; /* Apila logo y menú */
+        text-align: center;
+    }
+
+    .nav-principal ul {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tarjeta-servicio {
+        flex: 1 1 100%; /* 1 elemento por fila en móvil */
+    }
+
+    /* Cambio de diseño en aside  */
+    .barra-lateral {
+        background-color: #f75fab; /* Rosa intenso */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* FOOTER Y REDES */
+.pie-pagina {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.redes a {
+    color: rgb(247, 8, 207);
+    font-weight: bold;
+    text-decoration: none;
+}
